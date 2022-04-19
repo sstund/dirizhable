@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Дирижабль-1</string>
+    <string name="title_name">ШАГОМЕР ДИРИЖАБЛЬ-1</string>
+    <string name="aboutSteps">Шагов с последнего запуска:</string>
+</resources>

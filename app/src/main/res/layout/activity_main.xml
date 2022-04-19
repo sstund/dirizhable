@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/mainBackground"
+    >
+
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/titleBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/title_name"
+        android:textColor="@color/titleForeground"
+        android:textSize="20dp"
+        android:fontFamily="@font/red_october_fat"
+    />
+
+    <TextView
+        android:id="@+id/AboutSteps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Title"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/aboutSteps"
+        android:textColor="#81a1c1"
+        android:textSize="16dp"
+    />
+    <TextView
+        android:id="@+id/Steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AboutSteps"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/red_october"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Загрузка..."
+        android:textColor="#e5e9f0"
+        android:textSize="27dp"
+    />
+
+    <Button
+        android:id="@+id/step_button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/Steps"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/red_october_light"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:shadowColor="#00000000"
+        android:text="Шагнуть"
+        android:textColor="#455A64"
+        android:textSize="14sp"
+        app:backgroundTint="#a3be8c"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/tonull"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/step_button"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/red_october_light"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:shadowColor="#00000000"
+        android:text="Обнулить"
+        android:textColor="#455A64"
+        android:textSize="14sp"
+        app:backgroundTint="#bf616a"
+        app:cornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/copyrights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tonull"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto_mono"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Специально для Рушана Ринадовича"
+        android:textColor="#4c566a"
+        android:textSize="16dp" />
+
+</RelativeLayout>

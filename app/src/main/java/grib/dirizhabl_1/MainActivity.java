@@ -14,7 +14,7 @@ import android.hardware.SensorEvent;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int Count = 0;
+    private int Count = -1;
     private double magLast = 0;
 
     private TextView Steps;
@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
                     double dz = sensorEvent.values[2];
 
                     double mag = Math.sqrt(dx*dx + dy*dy + dz*dz);
-
+                    
                     if(mag-magLast > 4) {
                         Count++;
-                        Steps.setText(Integer.toString(Count));
+                        Steps.setText(Integer.toString(Math.max(Count, 0)));
                     }
                     magLast = mag;
                 }
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Count++;
-                Steps.setText(Integer.toString(Count));
+                Steps.setText(Integer.toString(Math.max(Count, 0)));
             }
         });
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Count=0;
-                Steps.setText(Integer.toString(Count));
+                Steps.setText(Integer.toString(Math.max(Count, 0)));
             }
         });
     }
